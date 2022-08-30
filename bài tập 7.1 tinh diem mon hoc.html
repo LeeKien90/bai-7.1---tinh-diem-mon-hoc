@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input id="vatLy" placeholder="điểm Vật lý" type="number"><br>
+<input id="hoaHoc" placeholder="điểm Hóa Học" type="number"><br>
+<input id="sinhHoc" placeholder="điểm Sinh Học" type="number"><br>
+<button onclick="input()">Click</button>
+<h1 id="tongdiem"></h1>
+<h1 id="diemtrungbinh"></h1>
+<script>
+<!--    Kiểu 1    -->
+// let vatLy = prompt()
+// let hoaHoc = prompt()
+// let sinhHoc = prompt()
+//
+// let tongDiem = parent(vatLy) + parent(hoaHoc) + parent(sinhHoc);
+// let diemTrungBinh = tongDiem/3
+//
+// document.write(`Điểm trung bình là: ${diemTrungBinh} và tổng điêm là: ${tongDiem}`);
+
+
+<!--    Kiểu 2   -->
+    function input() {
+        let vatLy = +document.getElementById('vatLy').value;
+        let hoaHoc = +document.getElementById('hoaHoc').value;
+        let sinhHoc = +document.getElementById('sinhHoc').value;
+        let tongDiem = vatLy + hoaHoc + sinhHoc;
+        let diemTrungBinh = tongDiem/3;
+        document.getElementById('tongdiem').innerHTML = 'Tổng điểm: ' + tongDiem;
+        document.getElementById('diemtrungbinh').innerHTML = 'Điểm trung bình: ' + diemTrungBinh;
+    }
+</script>
+</body>
+</html>
